@@ -1,3 +1,7 @@
+interface Directors extends Teacher {
+  numberOfReports: number;
+}
+
 interface Teacher {
   firstName: string;
   lastName: string;
@@ -5,9 +9,6 @@ interface Teacher {
   fullTimeEmployee: boolean;
   yearsOfExperience?: number;
   [key: string]: any;
-}
-interface Directors extends Teacher {
-  numberOfReports: number;
 }
 
 const director1: Directors = {
