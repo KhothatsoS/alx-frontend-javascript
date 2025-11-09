@@ -70,8 +70,11 @@ interface StudentClassInterface {
 class StudentClass implements StudentClassInterface {
   firstName: string;
   lastName: string;
-  
-  constructor(public firstName: string, public lastName: string) {}
+
+  constructor(public firstName: string, public lastName: string) {
+    this.firstName = firstName;
+    this.lastName = lastName;
+  }
 
   workOnHomework(): string {
     return "Currently working";
@@ -85,5 +88,6 @@ class StudentClass implements StudentClassInterface {
 const student1 = new StudentClass("Khothatso", "Sibasa");
 console.log(student1.displayName()); 
 console.log(student1.workOnHomework());
+
 
 
