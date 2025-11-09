@@ -4,13 +4,13 @@ interface DirectorInterface {
     workDirectorTasks(): string;
 }
 
-interface TeacherInterface{
+interface TeacherInterface {
     workFromHome(): string;
     getCoffeeBreak(): string;
     workTeacherTasks(): string;
 }
 
-class Director{
+class Director {
     workFromHome(): string {
         return 'Working from home';
     }
