@@ -34,6 +34,8 @@ console.log(director1);
 interface printTeacherFunction {
   (firstName: string, lastName: string): string;
 }
+
+function printTeacher{firstName,lastName}
 function printTeacher(firstName: string, lastName: string) {
   return `${firstName}. ${lastName}`;
   return `${firstName.charAt(0)}.${lastName}`
