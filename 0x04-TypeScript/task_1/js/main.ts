@@ -46,3 +46,12 @@ const printTeacher: printTeacherFunction = ({ firstName, lastName }) => {
 
 console.log(printTeacher({ firstName: "Last", lastName: "Sibanyoni" }));
 
+interface printTeacherFunction {
+  (firstName: string, lastName: string): string;
+}
+
+function printTeacher(firstName: string, lastName: string): string {
+  return `${firstName.charAt(0)}. ${lastName}`;
+}
+
+console.log(printTeacher("Last", "Sibanyoni"));
