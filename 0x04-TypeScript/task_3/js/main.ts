@@ -6,7 +6,7 @@ import * as CRUD from './crud.js';
 const row: RowElement = {
   firstName: "Khothatso",
   lastName: "Sibasa",
-  age: 23,
+  age: 23
 };
 
 const newRowID: RowID = CRUD.insertRow(row);
@@ -14,7 +14,7 @@ const newRowID: RowID = CRUD.insertRow(row);
 const updatedRow: RowElement = {
   firstName: "Khothatso",
   lastName: "Sibasa",
-  ...row, age: 23,
+  ...row, age: 23
 };
 
 CRUD.updateRow(newRowID, updatedRow);
