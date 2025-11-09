@@ -51,7 +51,8 @@ interface printTeacherFunction {
 }
 
 function printTeacher(firstName: string, lastName: string): string {
-  return `${firstName.charAt(0)}. ${lastName}`;
+  return `${firstName}. ${lastName}`;
 }
 
 console.log(printTeacher("Last", "Sibanyoni"));
+
