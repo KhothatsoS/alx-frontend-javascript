@@ -54,7 +54,7 @@ console.log(createEmployee('$500'));
 
 type Subjects = 'Math' | 'History';
 
-function teachClass(todayClass: Subjects) {
+function teachClass(todayClass:Subjects) {
         if (todayClass === 'Math') {
             return "Teaching Math";
         } else if (todayClass === 'History') {
@@ -63,4 +63,5 @@ function teachClass(todayClass: Subjects) {
 }
 
   console.log(teachClass('Math'));
+
   console.log(teachClass('History'));
