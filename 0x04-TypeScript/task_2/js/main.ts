@@ -4,13 +4,13 @@ interface DirectorInterface {
     workDirectorTasks(): string;
 }
 
-interface TeacherInterface {
+interface TeacherInterface{
     workFromHome(): string;
     getCoffeeBreak(): string;
     workTeacherTasks(): string;
 }
 
-class Director {
+class Director{
     workFromHome(): string {
         return 'Working from home';
     }
@@ -20,7 +20,7 @@ class Director {
     }
 
     workDirectorTasks(): string {
-        return 'Getting to director tasks';
+        return 'Working on director tasks';
     }
 
 }
@@ -41,7 +41,7 @@ class Teacher {
 }
 
 function createEmployee( salary: number | string): Director | Teacher {
-    if (typeof salary === "number") && if (salary < 500) {
+    if (typeof salary === "number" && salary < 500){
         return new Teacher();
     } else {
         return new Director();
@@ -51,3 +51,16 @@ function createEmployee( salary: number | string): Director | Teacher {
 console.log(createEmployee(200));
 console.log(createEmployee(1000));
 console.log(createEmployee('$500'));
+
+type Subjects = 'Math' | 'History';
+
+function teachClass(todayClass: Subjects) {
+        if (todayClass === 'Math') {
+            return "Teaching Math";
+        } else if (todayClass === 'History') {
+            return "Teaching History";
+        }
+}
+
+  console.log(teachClass('Math'));
+  console.log(teachClass('History'));
