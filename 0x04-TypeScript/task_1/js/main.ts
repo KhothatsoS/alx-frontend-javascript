@@ -1,6 +1,6 @@
 interface Teacher {
-  readonly firstName: string;
-  readonly lastName: string;
+  firstName: string;
+  lastName: string;
   location: string;
   fullTimeEmployee: boolean;
   yearsOfExperience?: number;
@@ -31,16 +31,18 @@ const director1: Director = {
 
 console.log(director1);
 
+interface Teacher {
+  firstName: string;
+  lastName: string;
+}
+
 interface printTeacherFunction {
-    (firstName: string, lastName: string): string;
-}
-function printTeacher(firstName: string, lastName: string) {
-    // return `${firstName.charAt(0)}. ${lastName}`;
-    return `${firstName}. ${lastName}`;
+  (teacher: Teacher): string;
 }
 
-// const printTeacher: printTeacherFunction = (firstName: string, lastName: string): string => {
-//     return `${firstName.charAt(0)}. ${lastName}`;
-// };
+const printTeacher: printTeacherFunction = ({ firstName, lastName }) => {
+  return `${firstName.charAt(0)}. ${lastName}`;
+};
 
-console.log(printTeacher("Last", "Sibanyoni"));
+console.log(printTeacher({ firstName: "Last", lastName: "Sibanyoni" }));
+
