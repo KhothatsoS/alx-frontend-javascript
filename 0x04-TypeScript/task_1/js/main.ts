@@ -56,6 +56,8 @@ function printTeacher(firstName: string, lastName: string): string {
 
 console.log(printTeacher("Last", "Sibanyoni"));
 
+
+
 interface StudentConstructor {
   new (firstName: string, lastName: string): StudentClassInterface;
 }
@@ -73,13 +75,11 @@ class StudentClass implements StudentClassInterface {
   }
 
   displayName(): string {
-    return this.firstName;
+    return `${this.firstName} ${this.lastName}`;
   }
 }
 
 const student1 = new StudentClass("Khothatso", "Sibasa");
 console.log(student1.displayName()); 
 console.log(student1.workOnHomework());
-
-
 
