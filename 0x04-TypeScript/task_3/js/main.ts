@@ -14,13 +14,8 @@ const updatedRow: RowElement = {
   lastName: "Salva",
   age: 23,
 };
-const updatedRow: RowElement = Object.assign({}, row, { age: 23 });
 
-const updatedRow: RowElement = {
-  ...row,
-  age: 23,
-};
-
+const updatedRow: RowElement = { ...row, age: 23 };
 
 CRUD.updateRow(newRowID, updatedRow);
 CRUD.deleteRow(newRowID);
