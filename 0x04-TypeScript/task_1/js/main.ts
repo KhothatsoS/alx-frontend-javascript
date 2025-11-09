@@ -67,11 +67,11 @@ interface StudentClassInterface {
   displayName(): string;
 }
 
-class StudentClass implements StudentClassInterface {
+class StudentClass {
   firstName: string;
   lastName: string;
 
-  constructor(public firstName: string, public lastName: string) {
+  constructor(firstName: string, lastName: string) {
     this.firstName = firstName;
     this.lastName = lastName;
   }
@@ -81,13 +81,14 @@ class StudentClass implements StudentClassInterface {
   }
 
   displayName(): string {
-    return `${this.firstName} ${this.lastName}`;
+    return this.firstName;
   }
 }
 
 const student1 = new StudentClass("Khothatso", "Sibasa");
-console.log(student1.displayName()); 
-console.log(student1.workOnHomework());
+console.log(student1.displayName());
+
+
 
 
 
